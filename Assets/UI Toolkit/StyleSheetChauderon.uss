@@ -1,0 +1,26 @@
+:root {
+
+}
+
+/* État de base de l'élément de validation */
+.validation-feedback {
+    /* Durée et type de transition pour l'opacité et le scale */
+    transition-property: opacity, scale;
+    transition-duration: 0.25s, 0.25s;
+    transition-timing-function: ease-out-back, ease-out-back; /* Effet rebond sympa */
+    
+    /* Centre le pivot de l'animation de scale */
+    transform-origin: center; 
+}
+
+/* ÉTAT INVISIBLE (Départ et Fin) */
+.pop-hidden {
+    opacity: 0;
+    scale: 0.3 0.3; /* Très petit */
+}
+
+/* ÉTAT VISIBLE (Milieu) */
+.pop-visible {
+    opacity: 1;
+    scale: 1 1; /* Taille normale */
+}

@@ -1,0 +1,5 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement name="LogoContainer" style="flex-grow: 1; height: 45%; position: absolute; width: 100%; align-self: center;">
+        <ui:Image source="project://database/Assets/Sprites/Arri%C3%A8re%20lent.png?fileID=2800000&amp;guid=a2abc41b8b8f040b3a61790b39b1ad0e&amp;type=3#Arrière lent" name="Image" style="transition-property: opacity, scale; transition-duration: 1s, 1.2s;"/>
+    </ui:VisualElement>
+</ui:UXML>

@@ -1,0 +1,11 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement style="flex-grow: 1; margin-top: 32px; margin-right: 32px; margin-bottom: 32px; margin-left: 32px;">
+        <ui:VisualElement style="flex-grow: 1; margin-left: 30%; margin-right: 30%;">
+            <ui:ProgressBar value="0" title="" data-source="project://database/Assets/UI%20Toolkit/PlayerData.asset?fileID=11400000&amp;guid=9fc5c41aca8de4762a3fceda97ec6ea2&amp;type=2#PlayerData" data-source-path="progressValue" style="font-size: 15px; -unity-background-image-tint-color: rgb(255, 255, 255); -unity-text-outline-color: rgb(0, 0, 0);">
+                <Bindings>
+                    <ui:DataBinding property="value" data-source-path="progressValue" data-source="project://database/Assets/UI%20Toolkit/PlayerData.asset?fileID=11400000&amp;guid=9fc5c41aca8de4762a3fceda97ec6ea2&amp;type=2#PlayerData" binding-mode="ToTarget"/>
+                </Bindings>
+            </ui:ProgressBar>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
