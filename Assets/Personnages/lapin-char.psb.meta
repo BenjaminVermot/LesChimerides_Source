@@ -2362,26 +2362,26 @@ ScriptedImporter:
     - name: oreilleG_10
       guid: d464e7851748b42fdb19153c6dc207a5
       position: {x: 339.1202, y: -0.00017856168, z: 0}
-      rotation: {x: 0, y: 0, z: -0.2013726, w: 0.9795148}
-      length: 343.60657
+      rotation: {x: 0, y: 0, z: -0.20137267, w: 0.9795147}
+      length: 343.60626
       parentId: 0
       color:
         serializedVersion: 2
         rgba: 4294901888
     - name: oreilleG_11
       guid: f6eb9f8da51194b83a5bb48780567100
-      position: {x: 343.6061, y: 0.00013923591, z: 0}
-      rotation: {x: 0, y: 0, z: -0.20994543, w: 0.97771317}
-      length: 324.60953
+      position: {x: 343.60635, y: 0.00021179783, z: 0}
+      rotation: {x: 0, y: 0, z: -0.20994547, w: 0.9777131}
+      length: 324.60956
       parentId: 1
       color:
         serializedVersion: 2
         rgba: 4286578943
     - name: oreilleG_12
       guid: a0ea48247c36b4cf99dbffde829f9e0f
-      position: {x: 324.60992, y: 0.00018434768, z: 0}
-      rotation: {x: 0, y: 0, z: -0.21959956, w: 0.9755901}
-      length: 249.35938
+      position: {x: 324.60956, y: -0.000095309566, z: 0}
+      rotation: {x: 0, y: 0, z: -0.21959937, w: 0.9755902}
+      length: 249.3594
       parentId: 2
       color:
         serializedVersion: 2
@@ -2728,25 +2728,25 @@ ScriptedImporter:
     - name: oreilleD_7
       guid: 8843d29d7b2e044e19c6d6a7ed7b70fd
       position: {x: 371.27457, y: -0.000051275125, z: 0}
-      rotation: {x: 0, y: 0, z: -0.36236972, w: 0.9320345}
-      length: 277.17377
+      rotation: {x: 0, y: 0, z: -0.36236963, w: 0.9320345}
+      length: 277.1741
       parentId: 0
       color:
         serializedVersion: 2
         rgba: 4278255488
     - name: oreilleD_8
       guid: d2e0a3063251142a18aaf4b3205a6c6f
-      position: {x: 277.17392, y: -0.00001687499, z: 0}
-      rotation: {x: 0, y: 0, z: -0.1012329, w: 0.99486274}
-      length: 297.8902
+      position: {x: 277.1745, y: -0.000011723532, z: 0}
+      rotation: {x: 0, y: 0, z: -0.10123357, w: 0.9948627}
+      length: 297.89084
       parentId: 1
       color:
         serializedVersion: 2
         rgba: 4286643968
     - name: oreilleD_9
       guid: 368cb596cfe154baeb528826fe2d0312
-      position: {x: 297.89066, y: 0.00009402305, z: 0}
-      rotation: {x: 0, y: 0, z: -0.09201058, w: 0.99575806}
+      position: {x: 297.8906, y: -0.000024510926, z: 0}
+      rotation: {x: 0, y: 0, z: -0.09201009, w: 0.99575806}
       length: 311.88208
       parentId: 2
       color:
@@ -4790,18 +4790,18 @@ ScriptedImporter:
     spriteBone:
     - name: jambe_6
       guid: 6f70991b72a624c84938c83e7524e785
-      position: {x: 343.5017, y: 0.00020561546, z: 0}
-      rotation: {x: 0, y: 0, z: 0.70079726, w: 0.71336055}
-      length: 302.60324
+      position: {x: 343.5021, y: 0.000113523085, z: 0}
+      rotation: {x: 0, y: 0, z: 0.70079684, w: 0.71336097}
+      length: 302.60336
       parentId: 1
       color:
         serializedVersion: 2
         rgba: 4278190335
     - name: jambe_5
       guid: 8079f9a587f6b4bf9887eec181b0865d
-      position: {x: 63.346313, y: 454.43848, z: 0}
-      rotation: {x: 0, y: 0, z: -0.73685724, w: 0.6760484}
-      length: 343.5015
+      position: {x: 63.346313, y: 454.438, z: 0}
+      rotation: {x: 0, y: 0, z: -0.73685694, w: 0.6760487}
+      length: 343.50153
       parentId: -1
       color:
         serializedVersion: 2
@@ -5116,27 +5116,27 @@ ScriptedImporter:
     spriteBone:
     - name: jambe_3
       guid: ba6c07c07969646ea948f3ab0ea1cb09
-      position: {x: 330.63724, y: 0.0022704073, z: 0}
-      rotation: {x: 0, y: -0, z: -0.6983515, w: -0.71575505}
-      length: 332.85965
+      position: {x: 330.63702, y: 0.0021409479, z: 0}
+      rotation: {x: 0, y: -0, z: -0.6983516, w: -0.71575487}
+      length: 332.8597
       parentId: 1
       color:
         serializedVersion: 2
         rgba: 4294967040
     - name: jambe_2
       guid: 119bd7ab4b7254259978ab667791b272
-      position: {x: 103.19873, y: 431.40674, z: 0}
+      position: {x: 103.19873, y: 431.40625, z: 0}
       rotation: {x: 0, y: 0, z: 0.7183237, w: -0.6957091}
-      length: 330.6372
+      length: 330.6369
       parentId: -1
       color:
         serializedVersion: 2
         rgba: 4278255360
     - name: jambe_6
       guid: 6f70991b72a624c84938c83e7524e785
-      position: {x: -158.16614, y: 107.20703, z: 0}
-      rotation: {x: 0, y: 0, z: -0.05187203, w: 0.9986538}
-      length: 302.60327
+      position: {x: -158.1659, y: 107.20654, z: 0}
+      rotation: {x: 0, y: 0, z: -0.051872145, w: 0.9986537}
+      length: 302.60333
       parentId: -1
       color:
         serializedVersion: 2
@@ -5451,9 +5451,9 @@ ScriptedImporter:
     spriteBone:
     - name: jambe_2
       guid: 119bd7ab4b7254259978ab667791b272
-      position: {x: 370.80597, y: -0.0004672355, z: 0}
+      position: {x: 370.80646, y: -0.0004505692, z: 0}
       rotation: {x: 0, y: 0, z: 0.0010780542, w: 0.9999994}
-      length: 330.63718
+      length: 330.63687
       parentId: 1
       color:
         serializedVersion: 2
@@ -5462,16 +5462,16 @@ ScriptedImporter:
       guid: 02e0c72b25c434dcb8b5433256559f5b
       position: {x: -28.867697, y: -3.122223, z: 0}
       rotation: {x: 0, y: 0, z: 0.99973893, w: 0.022851441}
-      length: 370.8061
+      length: 370.80652
       parentId: 3
       color:
         serializedVersion: 2
         rgba: 4278255488
     - name: jambe_3
       guid: ba6c07c07969646ea948f3ab0ea1cb09
-      position: {x: 330.63702, y: 0.0021250814, z: 0}
-      rotation: {x: 0, y: 0, z: -0.69835144, w: -0.71575505}
-      length: 332.85968
+      position: {x: 330.6368, y: 0.0020108805, z: 0}
+      rotation: {x: 0, y: 0, z: -0.6983516, w: -0.7157549}
+      length: 332.8596
       parentId: 0
       color:
         serializedVersion: 2
@@ -5883,17 +5883,17 @@ ScriptedImporter:
     spriteBone:
     - name: jambe_6
       guid: 6f70991b72a624c84938c83e7524e785
-      position: {x: 343.50122, y: 0.000457468, z: 0}
-      rotation: {x: 0, y: 0, z: 0.70079726, w: 0.7133605}
-      length: 302.60306
+      position: {x: 343.50128, y: 0.00015522336, z: 0}
+      rotation: {x: 0, y: 0, z: 0.70079684, w: 0.71336097}
+      length: 302.6032
       parentId: 1
       color:
         serializedVersion: 2
         rgba: 4278190335
     - name: jambe_5
       guid: 8079f9a587f6b4bf9887eec181b0865d
-      position: {x: 381.65698, y: -0.00044009666, z: 0}
-      rotation: {x: 0, y: 0, z: -0.032455962, w: 0.99947315}
+      position: {x: 381.65747, y: -0.0004297948, z: 0}
+      rotation: {x: 0, y: 0, z: -0.032455545, w: 0.9994732}
       length: 343.50134
       parentId: 2
       color:
@@ -5903,7 +5903,7 @@ ScriptedImporter:
       guid: 552f48e46cdc2424ebb76e1c3310f25b
       position: {x: -7.7628565, y: -8.843907, z: 0}
       rotation: {x: 0, y: 0, z: -0.99998784, w: 0.0049465066}
-      length: 381.65674
+      length: 381.65723
       parentId: 3
       color:
         serializedVersion: 2
@@ -6369,8 +6369,8 @@ ScriptedImporter:
     - name: jambe
       guid: 552f48e46cdc2424ebb76e1c3310f25b
       position: {x: -7.762741, y: -8.843808, z: 0}
-      rotation: {x: 0, y: -0, z: -0.9999878, w: 0.004946526}
-      length: 381.65683
+      rotation: {x: 0, y: -0, z: -0.99998784, w: 0.0049465257}
+      length: 381.65723
       parentId: 23
       color:
         serializedVersion: 2
@@ -6379,7 +6379,7 @@ ScriptedImporter:
       guid: 02e0c72b25c434dcb8b5433256559f5b
       position: {x: -28.86763, y: -3.1220968, z: 0}
       rotation: {x: 0, y: -0, z: 0.9997389, w: 0.022851462}
-      length: 370.80612
+      length: 370.80655
       parentId: 22
       color:
         serializedVersion: 2
@@ -6422,17 +6422,17 @@ ScriptedImporter:
         rgba: 4286578943
     - name: jambe_2
       guid: 119bd7ab4b7254259978ab667791b272
-      position: {x: 370.80615, y: -0.000307881, z: 0}
+      position: {x: 370.80658, y: -0.00029329798, z: 0}
       rotation: {x: 0, y: 0, z: 0.0010780959, w: 0.9999994}
-      length: 330.6372
+      length: 330.6369
       parentId: 7
       color:
         serializedVersion: 2
         rgba: 4278255360
     - name: jambe_3
       guid: ba6c07c07969646ea948f3ab0ea1cb09
-      position: {x: 330.63718, y: 0.0022199857, z: 0}
-      rotation: {x: 0, y: 0, z: -0.69835144, w: -0.71575505}
+      position: {x: 330.63684, y: 0.0021009054, z: 0}
+      rotation: {x: 0, y: 0, z: -0.6983516, w: -0.7157549}
       length: 332.85965
       parentId: 12
       color:
@@ -6440,17 +6440,17 @@ ScriptedImporter:
         rgba: 4294967040
     - name: jambe_5
       guid: 8079f9a587f6b4bf9887eec181b0865d
-      position: {x: 381.6569, y: -0.00030529374, z: 0}
-      rotation: {x: 0, y: 0, z: -0.032456014, w: 0.99947315}
-      length: 343.50143
+      position: {x: 381.6573, y: -0.0001880647, z: 0}
+      rotation: {x: 0, y: 0, z: -0.032455564, w: 0.9994732}
+      length: 343.50137
       parentId: 6
       color:
         serializedVersion: 2
         rgba: 4294902015
     - name: jambe_6
       guid: 6f70991b72a624c84938c83e7524e785
-      position: {x: 343.50143, y: 0.00014345699, z: 0}
-      rotation: {x: 0, y: 0, z: 0.70079726, w: 0.7133605}
+      position: {x: 343.5013, y: 0.00017909678, z: 0}
+      rotation: {x: 0, y: 0, z: 0.7007969, w: 0.7133609}
       length: 302.6032
       parentId: 14
       color:
@@ -6459,25 +6459,25 @@ ScriptedImporter:
     - name: oreilleD_7
       guid: 8843d29d7b2e044e19c6d6a7ed7b70fd
       position: {x: 371.27487, y: 0.0001610601, z: 0}
-      rotation: {x: 0, y: 0, z: -0.3623697, w: 0.93203443}
-      length: 277.17377
+      rotation: {x: 0, y: 0, z: -0.3623696, w: 0.9320345}
+      length: 277.1741
       parentId: 2
       color:
         serializedVersion: 2
         rgba: 4278255488
     - name: oreilleD_8
       guid: d2e0a3063251142a18aaf4b3205a6c6f
-      position: {x: 277.17398, y: -0.00015956006, z: 0}
-      rotation: {x: 0, y: 0, z: -0.10123288, w: 0.9948628}
-      length: 297.8902
+      position: {x: 277.17426, y: -0.00016836557, z: 0}
+      rotation: {x: 0, y: 0, z: -0.101233624, w: 0.9948627}
+      length: 297.89084
       parentId: 16
       color:
         serializedVersion: 2
         rgba: 4286643968
     - name: oreilleD_9
       guid: 368cb596cfe154baeb528826fe2d0312
-      position: {x: 297.89026, y: -0.000029415329, z: 0}
-      rotation: {x: 0, y: 0, z: -0.0920106, w: 0.9957581}
+      position: {x: 297.89084, y: 0.000060956605, z: 0}
+      rotation: {x: 0, y: 0, z: -0.09201004, w: 0.9957581}
       length: 311.88208
       parentId: 17
       color:
@@ -6486,25 +6486,25 @@ ScriptedImporter:
     - name: oreilleG_10
       guid: d464e7851748b42fdb19153c6dc207a5
       position: {x: 339.12024, y: 0.0000149979605, z: 0}
-      rotation: {x: 0, y: 0, z: -0.20137253, w: 0.9795147}
-      length: 343.60654
+      rotation: {x: 0, y: 0, z: -0.20137261, w: 0.9795147}
+      length: 343.60626
       parentId: 3
       color:
         serializedVersion: 2
         rgba: 4294901888
     - name: oreilleG_11
       guid: f6eb9f8da51194b83a5bb48780567100
-      position: {x: 343.60632, y: 0.000027391958, z: 0}
-      rotation: {x: 0, y: 0, z: -0.20994541, w: 0.9777131}
-      length: 324.60953
+      position: {x: 343.6062, y: 0.00008512105, z: 0}
+      rotation: {x: 0, y: 0, z: -0.20994547, w: 0.9777131}
+      length: 324.60956
       parentId: 19
       color:
         serializedVersion: 2
         rgba: 4286578943
     - name: oreilleG_12
       guid: a0ea48247c36b4cf99dbffde829f9e0f
-      position: {x: 324.6097, y: 0.00006190571, z: 0}
-      rotation: {x: 0, y: 0, z: -0.21959959, w: 0.97559017}
+      position: {x: 324.6095, y: 0.00003999548, z: 0}
+      rotation: {x: 0, y: 0, z: -0.21959935, w: 0.97559017}
       length: 249.35938
       parentId: 20
       color:
