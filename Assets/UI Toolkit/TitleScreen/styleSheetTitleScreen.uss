@@ -1,0 +1,50 @@
+/* Le style de base de ton image */
+.animated-image {
+    /* On définit le point de pivot au centre pour le Scale */
+    transform-origin: center;
+    
+    /* Transition fluide pour le ScaleIn et ScaleDown */
+    transition-property: scale, opacity;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-out-back; /* Effet rebond sympa */
+
+    scale: 0.8 0.8;
+}
+
+/* Animation Idle (Battement de coeur continu) via Keyframes */
+@keyframes idle-pulse {
+    0% {
+        scale: 0.8 0.8;
+    }
+    50% {
+        scale: 1.05 1.05; /* Grossit légèrement */
+    }
+    100% {
+        scale: 0.8 0.8;
+    }
+}
+
+/* Classe qui déclenche l'Idle */
+.animated-image--idle {
+    animation-name: idle-pulse;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes fadeOut{
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+.animated-image--fadeOut{
+    animation-name: fadeOut;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+}
+

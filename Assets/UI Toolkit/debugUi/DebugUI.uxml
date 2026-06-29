@@ -1,0 +1,24 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement name="Container" style="flex-grow: 1; position: absolute; top: 0; left: 0; width: 50%; height: 200px; flex-direction: row; padding-top: 16px; padding-right: 0; padding-bottom: 0; padding-left: 16px;">
+        <ui:Label text="State:" name="CurrentSate" data-source="project://database/Assets/Scripts/Datas/WheelDatas.asset?fileID=11400000&amp;guid=79d335324fde047028894ed2e8ba3b78&amp;type=2#WheelDatas" style="width: auto; height: 20px; color: rgb(255, 255, 255);">
+            <Bindings>
+                <ui:DataBinding property="text" data-source-path="currentState" binding-mode="ToTarget"/>
+            </Bindings>
+        </ui:Label>
+        <ui:Label text="Speed:" name="WheelSpeed" data-source="project://database/Assets/Scripts/Datas/WheelDatas.asset?fileID=11400000&amp;guid=79d335324fde047028894ed2e8ba3b78&amp;type=2#WheelDatas" style="width: auto; height: 20px; color: rgb(255, 255, 255);">
+            <Bindings>
+                <ui:DataBinding property="text" data-source-path="finalWheelSpeed" data-source="project://database/Assets/Scripts/Datas/WheelDatas.asset?fileID=11400000&amp;guid=79d335324fde047028894ed2e8ba3b78&amp;type=2#WheelDatas" binding-mode="ToTarget"/>
+            </Bindings>
+        </ui:Label>
+        <ui:Label text="Angle:" name="WheelAngle" data-source="project://database/Assets/Scripts/Datas/WheelDatas.asset?fileID=11400000&amp;guid=79d335324fde047028894ed2e8ba3b78&amp;type=2#WheelDatas" style="width: auto; height: 20px; color: rgb(255, 255, 255);">
+            <Bindings>
+                <ui:DataBinding property="text" data-source-path="finalWheelSpeedFullRange" data-source="project://database/Assets/Scripts/Datas/WheelDatas.asset?fileID=11400000&amp;guid=79d335324fde047028894ed2e8ba3b78&amp;type=2#WheelDatas" binding-mode="ToTarget"/>
+            </Bindings>
+        </ui:Label>
+        <ui:Label text="Direction:" name="WheelDirection" data-source="project://database/Assets/Scripts/Datas/WheelDatas.asset?fileID=11400000&amp;guid=79d335324fde047028894ed2e8ba3b78&amp;type=2#WheelDatas" style="width: auto; height: 20px; color: rgb(255, 255, 255);">
+            <Bindings>
+                <ui:DataBinding property="text" data-source-path="wheelDirection" data-source="project://database/Assets/Scripts/Datas/WheelDatas.asset?fileID=11400000&amp;guid=79d335324fde047028894ed2e8ba3b78&amp;type=2#WheelDatas" binding-mode="ToTarget"/>
+            </Bindings>
+        </ui:Label>
+    </ui:VisualElement>
+</ui:UXML>

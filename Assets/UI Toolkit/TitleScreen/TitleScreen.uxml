@@ -1,5 +1,6 @@
 <ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
-    <ui:VisualElement name="LogoContainer" style="flex-grow: 1; height: 45%; position: absolute; width: 100%; align-self: center;">
-        <ui:Image source="project://database/Assets/Sprites/Arri%C3%A8re%20lent.png?fileID=2800000&amp;guid=a2abc41b8b8f040b3a61790b39b1ad0e&amp;type=3#Arrière lent" name="Image" style="transition-property: opacity, scale; transition-duration: 1s, 1.2s;"/>
+    <Style src="project://database/Assets/UI%20Toolkit/TitleScreen/styleSheetTitleScreen.uss?fileID=7433441132597879392&amp;guid=3621a367f53e14ee7ad4936bd4467ce5&amp;type=3#styleSheetTitleScreen"/>
+    <ui:VisualElement name="LogoContainer" style="flex-grow: 1; height: 45%; position: absolute; width: 100%; align-self: center; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 64px; padding-right: 0; padding-bottom: 0; padding-left: 0; justify-content: flex-start; align-content: flex-start; align-items: center;">
+        <ui:Image source="project://database/Assets/Sprites/Logo.png?fileID=2800000&amp;guid=d6d2c764a0e6b4dc7901516b182e5bb0&amp;type=3#Logo" name="MainTitle" class="animated-image animated-image--idle" style="transition-property: opacity, scale; transition-duration: 1s, 1.2s; height: 300px; width: 800px;"/>
     </ui:VisualElement>
 </ui:UXML>
