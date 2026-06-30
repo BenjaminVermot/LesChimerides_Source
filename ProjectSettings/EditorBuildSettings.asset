@@ -8,15 +8,28 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
-  - enabled: 1
+  - enabled: 0
+    path: Assets/Scenes/StartScene.unity
+    guid: 52fe0d5fa9c1344dc950aa8a547c279c
+  - enabled: 0
+    path: "Assets/Scenes/P\xEAche.unity"
+    guid: 97e6b3a006cc54ebda3c0200fad04be4
+  - enabled: 0
+    path: Assets/Scenes/Sequence1.unity
+    guid: eafc250d52abf4bc7bc5fa2f04c8d85b
+  - enabled: 0
+    path: Assets/Scenes/Chaudron.unity
+    guid: ea8c53507499b4459b263fac6e6b8199
+  - enabled: 0
+    path: Assets/Scenes/Sequence2.unity
+    guid: ce3581066ed1f463db1f65bfa733f3ec
+  - enabled: 0
     path: Assets/Scenes/MainMenu.unity
     guid: bcdb250ab9e3f4907afcf66f651717ae
   - enabled: 1
-    path: Assets/Scenes/LEVEL1.unity
-    guid: 97e6b3a006cc54ebda3c0200fad04be4
-  - enabled: 1
-    path: Assets/Scenes/CHAUDRON.unity
-    guid: ea8c53507499b4459b263fac6e6b8199
+    path: Assets/Scenes/MAINSCENE.unity
+    guid: 3baaaad2bcaf944b4bb197fd0d913ce1
   m_configObjects:
+    com.unity.input.settings: {fileID: 11400000, guid: 535717807f4fb47cea6a253294d70141, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

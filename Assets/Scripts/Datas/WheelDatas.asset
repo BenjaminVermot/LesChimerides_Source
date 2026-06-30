@@ -1,0 +1,44 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c25acad790d3a41de97a8431e4b89ab3, type: 3}
+  m_Name: WheelDatas
+  m_EditorClassIdentifier: Assembly-CSharp::WheelObject
+  finalWheelSpeed: 0
+  finalWheelSpeedFullRange: 0
+  wheelDirection: 0
+  isStill: 1
+  states:
+  - startRideau
+  - intro
+  - vent
+  - soleil
+  stateIndex: 0
+  animationIndex: 0
+  currentState: soleil
+  "rideauEstLev\xE9": 0
+  isInTransition: 0
+  ventIsHere: 0
+  nextSpawnPoint: {x: 83.9, y: -4.44, z: 0}
+  waitingTime: 3
+  statesValues:
+  - stateName: Introduction
+    characterSpeed: 6
+    targetWheelSpeedRange: {x: 0, y: 0}
+    lerpSpeed: 4
+  - stateName: Vent
+    characterSpeed: 6
+    targetWheelSpeedRange: {x: 0, y: 0}
+    lerpSpeed: 8
+  - stateName: Soleil
+    characterSpeed: 7
+    targetWheelSpeedRange: {x: 0, y: 0}
+    lerpSpeed: 5
