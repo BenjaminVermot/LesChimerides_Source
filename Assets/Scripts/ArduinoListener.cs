@@ -76,13 +76,13 @@ public class ArduinoListener : MonoBehaviour
         {
             finalWheelSpeedFullRange = 0f;
             finalWheelSpeed = 0f;
-            isStill = true;
+            SetStill(true);
             direction = 0;
         }
         else
         {
-            isStill = false;
-            finalWheelSpeedFullRange = (float)Math.Round(finalWheelSpeedFullRange, 2);
+            SetStill(false);
+            finalWheelSpeedFullRange = (float)Math.Round(finalWheelSpeedFullRange, 4);
 
             // La vitesse absolue suit la valeur lissée absolue
             finalWheelSpeed = Mathf.Abs(finalWheelSpeedFullRange);
@@ -106,14 +106,14 @@ public class ArduinoListener : MonoBehaviour
             {
                 recievedWheelSpeed = 0f;
                 direction = 0;
-                isStill = true;
+                SetStill(true);
             }
             else
             {
                 direction = rawDirection;
                 // La vitesse est signée uniquement par la direction.
                 recievedWheelSpeed = rawSpeed * direction;
-                isStill = false;
+                SetStill(false);
             }
 
             buttonState = int.Parse(values[2].Trim());
@@ -158,5 +158,13 @@ public class ArduinoListener : MonoBehaviour
         wheelDatas.finalWheelSpeed = finalWheelSpeed;
         wheelDatas.finalWheelSpeedFullRange = finalWheelSpeedFullRange;
         wheelDatas.wheelDirection = direction;
+    }
+
+    void SetStill(bool value)
+    {
+        if (wheelDatas != null && wheelDatas.isStill != value)
+        {
+            wheelDatas.isStill = value;
+        }
     }
 }

@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c25acad790d3a41de97a8431e4b89ab3, type: 3}
   m_Name: WheelDatas
   m_EditorClassIdentifier: Assembly-CSharp::WheelObject
-  finalWheelSpeed: 0.5
-  finalWheelSpeedFullRange: 0.5
+  finalWheelSpeed: 0
+  finalWheelSpeedFullRange: 0
   wheelDirection: 0
+  isStill: 1
   states:
   - rideauDynamique
   - intro
@@ -23,9 +24,10 @@ MonoBehaviour:
   - soleil
   - rideaux2
   - end
-  stateIndex: 3
-  currentState: rideaux1
+  stateIndex: 2
+  currentState: vent
   "rideauEstLev\xE9": 1
+  ventIsHere: 0
   statesValues:
   - stateType: 1
     tempsDurantRideaux: 0
@@ -40,7 +42,7 @@ MonoBehaviour:
     targetWheelSpeedRange: {x: 0, y: 0}
     lerpSpeed: 4
   - stateType: 0
-    tempsDurantRideaux: 4
+    tempsDurantRideaux: 0
     textDurantRideaux: COUCOU LE MONDE
     characterSpeed: 6
     targetWheelSpeedRange: {x: 0, y: 0}
@@ -48,12 +50,12 @@ MonoBehaviour:
   - stateType: 0
     tempsDurantRideaux: 0
     textDurantRideaux: 
-    characterSpeed: 7
+    characterSpeed: 3
     targetWheelSpeedRange: {x: 0, y: 0}
-    lerpSpeed: 0
+    lerpSpeed: 5
   - stateType: 0
     tempsDurantRideaux: 0
     textDurantRideaux: 
     characterSpeed: 7
     targetWheelSpeedRange: {x: 0, y: 0}
-    lerpSpeed: 0
+    lerpSpeed: 5

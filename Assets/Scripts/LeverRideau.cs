@@ -27,7 +27,6 @@ public class LeverRideau : MonoBehaviour
             wheelDatas.rideauEstLevé = true;
 
             stateManager.nextState();
-
             Debug.Log("Rideau est levé !!");
         }
     }

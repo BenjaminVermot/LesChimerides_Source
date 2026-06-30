@@ -31,7 +31,7 @@ public class WheelObject : ScriptableObject
     public float finalWheelSpeed;
     public float finalWheelSpeedFullRange;
     public int wheelDirection;
-
+    public bool isStill;
 
 
     [Header("States")]
@@ -49,6 +49,8 @@ public class WheelObject : ScriptableObject
 
     public string currentState;
     public bool rideauEstLevé = false;
+
+    public bool ventIsHere = false;
 
     public List<StateValues> statesValues = new List<StateValues>();
 }

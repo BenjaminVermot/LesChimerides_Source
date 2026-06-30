@@ -10,5 +10,8 @@ public class stateCheckpoint : MonoBehaviour
     void OnTriggerEnter2D(Collider2D collision)
     {
         stateManager.nextState();
+        Destroy(this);
+
+
     }
 }
