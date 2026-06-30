@@ -22,7 +22,7 @@ public class CharactersMovement : MonoBehaviour
             }
 
             // Exemple d'action sur chaque personnage
-            if (wheelDatas.statesValues[wheelDatas.stateIndex].stateType == WheelObject.StateType.Jeu)
+            if (wheelDatas.rideauEstLevé == true && wheelDatas.isInTransition == false)
             {
                 personnageTransform.position += Vector3.right * (wheelDatas.statesValues[wheelDatas.stateIndex].characterSpeed * Time.deltaTime) * wheelDatas.finalWheelSpeed;
             }

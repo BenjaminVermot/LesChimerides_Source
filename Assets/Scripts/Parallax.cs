@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Parallax : MonoBehaviour
 {
-    private float length, startPos;
+    private float startPos;
     public GameObject cam;
 
     [Header("Effet de parallaxe (0 = suit la cam, 1 = fixe dans le monde)")]
@@ -12,7 +12,6 @@ public class Parallax : MonoBehaviour
     void Start()
     {
         startPos = transform.position.x;
-        length = GetComponent<SpriteRenderer>().bounds.size.x;
     }
 
     void Update()

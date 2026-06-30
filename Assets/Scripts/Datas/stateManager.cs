@@ -1,11 +1,22 @@
+using System.Collections;
 using System.Drawing.Text;
 using UnityEngine;
+using UnityEngine.TextCore.Text;
 
 public class stateManager : MonoBehaviour
 {
     public WheelObject wheelDatas;
     public VentManager ventManager;
     public Animator[] animauxAnimators;
+
+    public Animator rideauAnimator;
+
+    public Animator decorsIntroAnimation;
+    public Animator[] decorsAnimations;
+
+    public GameObject[] animaux;
+
+    public GameObject character;
 
     [Header("StateStartBools")]
     [SerializeField] private bool windHasStarted = false;
@@ -140,5 +151,39 @@ public class stateManager : MonoBehaviour
             animator.ResetTrigger("VentIdle");
             animator.ResetTrigger("VentWalking");
         }
+    }
+
+    public void launchRideauTransition()
+    {
+        rideauAnimator.SetTrigger("on");
+
+        Debug.Log("Rideau transition !");
+
+        StartCoroutine(waitForRideaux());
+    }
+
+    IEnumerator waitForRideaux()
+    {
+        yield return new WaitForSeconds(2);
+
+        animaux[wheelDatas.animationIndex].SetActive(true);
+        wheelDatas.isInTransition = true;
+
+        //Téléporter le player vers le prochain spawn point
+        character.transform.position = new Vector3(
+            wheelDatas.nextSpawnPoint.x,
+            wheelDatas.nextSpawnPoint.y,
+            character.transform.position.z
+        );
+
+        //Lancer l'animation d'intro du nouveau spot
+        decorsAnimations[wheelDatas.animationIndex].SetFloat("AnimationSpeed", 1);
+
+
+        yield return new WaitForSeconds(wheelDatas.waitingTime);
+        rideauAnimator.SetTrigger("off");
+        wheelDatas.isInTransition = false;
+        nextState();
+
     }
 }

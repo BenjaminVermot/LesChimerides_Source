@@ -9,7 +9,7 @@ public class VentManager : MonoBehaviour
     public WheelObject wheelDatas;
 
     public stateManager stateManager;
-    [SerializeField] private bool isProtected = false;
+    public bool isProtected = false;
 
 
     [Header("Wind values")]
@@ -49,43 +49,6 @@ public class VentManager : MonoBehaviour
         {
             character.transform.position += Vector3.left * (windForce * windEnvelope * Time.deltaTime);
         }
-    }
-
-    void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (IsCharacterCollision(collision))
-        {
-            isProtected = true;
-            Debug.Log("IS Protected !");
-        }
-    }
-
-    void OnTriggerExit2D(Collider2D collision)
-    {
-        if (IsCharacterCollision(collision))
-        {
-            isProtected = false;
-        }
-    }
-
-    bool IsCharacterCollision(Collider2D collision)
-    {
-        if (character == null)
-        {
-            return false;
-        }
-
-        if (collision.gameObject == character)
-        {
-            return true;
-        }
-
-        if (collision.transform.root != null && collision.transform.root.gameObject == character)
-        {
-            return true;
-        }
-
-        return collision.attachedRigidbody != null && collision.attachedRigidbody.gameObject == character;
     }
 
     IEnumerator waitForNextWave()

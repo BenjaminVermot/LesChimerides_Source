@@ -17,45 +17,28 @@ MonoBehaviour:
   wheelDirection: 0
   isStill: 1
   states:
-  - rideauDynamique
+  - startRideau
   - intro
   - vent
-  - rideaux1
   - soleil
-  - rideaux2
-  - end
-  stateIndex: 2
-  currentState: vent
-  "rideauEstLev\xE9": 1
+  stateIndex: 0
+  animationIndex: 0
+  currentState: soleil
+  "rideauEstLev\xE9": 0
+  isInTransition: 0
   ventIsHere: 0
+  nextSpawnPoint: {x: 83.9, y: -4.44, z: 0}
+  waitingTime: 3
   statesValues:
-  - stateType: 1
-    tempsDurantRideaux: 0
-    textDurantRideaux: 
+  - stateName: Introduction
     characterSpeed: 6
     targetWheelSpeedRange: {x: 0, y: 0}
     lerpSpeed: 4
-  - stateType: 0
-    tempsDurantRideaux: 0
-    textDurantRideaux: 
-    characterSpeed: 6
-    targetWheelSpeedRange: {x: 0, y: 0}
-    lerpSpeed: 4
-  - stateType: 0
-    tempsDurantRideaux: 0
-    textDurantRideaux: COUCOU LE MONDE
+  - stateName: Vent
     characterSpeed: 6
     targetWheelSpeedRange: {x: 0, y: 0}
     lerpSpeed: 8
-  - stateType: 0
-    tempsDurantRideaux: 0
-    textDurantRideaux: 
-    characterSpeed: 3
-    targetWheelSpeedRange: {x: 0, y: 0}
-    lerpSpeed: 5
-  - stateType: 0
-    tempsDurantRideaux: 0
-    textDurantRideaux: 
+  - stateName: Soleil
     characterSpeed: 7
     targetWheelSpeedRange: {x: 0, y: 0}
     lerpSpeed: 5
