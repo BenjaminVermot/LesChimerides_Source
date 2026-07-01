@@ -45,7 +45,7 @@ public class VentManager : MonoBehaviour
         float normalizedTime = Mathf.Clamp01(windWaveElapsedTime / Mathf.Max(0.01f, windDuration));
         float windEnvelope = Mathf.Sin(normalizedTime * Mathf.PI);
 
-        if (isProtected == false)
+        if (isProtected == false && wheelDatas.isInTransition == false)
         {
             character.transform.position += Vector3.left * (windForce * windEnvelope * Time.deltaTime);
         }
@@ -96,7 +96,6 @@ public class VentManager : MonoBehaviour
         wheelDatas.ventIsHere = false;
         stateManager.updateCurrentAnimation();
         StartCoroutine(waitForNextWave());
-
     }
 
 

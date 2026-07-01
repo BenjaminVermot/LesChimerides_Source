@@ -11,7 +11,7 @@ public class wheelDataReset : MonoBehaviour
 
     void Awake()
     {
-        wheelDatas.currentState = wheelDatas.states[wheelDatas.stateIndex];
+        wheelDatas.currentState = wheelDatas.statesValues[0].stateName;
         wheelDatas.stateIndex = 0;
         wheelDatas.rideauEstLevé = false;
         wheelDatas.ventIsHere = ventIsHere;

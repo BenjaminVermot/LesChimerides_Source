@@ -7,18 +7,23 @@ public class stateCheckpoint : MonoBehaviour
     public WheelObject wheelDatas;
     public stateManager stateManager;
 
-    public bool rideauTransition;
+    private bool hasBeenTriggered = false;
 
     void OnTriggerEnter2D(Collider2D collision)
     {
+        if (hasBeenTriggered)
+        {
+            return;
+        }
+
+        if (wheelDatas != null && wheelDatas.isInTransition)
+        {
+            return;
+        }
+
+        hasBeenTriggered = true;
 
         stateManager.nextState();
-
-
-        if (rideauTransition == true)
-        {
-            stateManager.launchRideauTransition();
-        }
 
         Destroy(this.gameObject);
 

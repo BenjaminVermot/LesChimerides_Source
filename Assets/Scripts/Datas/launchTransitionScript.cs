@@ -8,19 +8,27 @@ public class launchTransitionScript : MonoBehaviour
 
     public Transform nextSpawnPoint;
 
+    private bool hasBeenTriggered = false;
+
     public int waitingTime;
 
     void OnTriggerEnter2D(Collider2D collision)
     {
+        if (hasBeenTriggered == false)
+        {
+            hasBeenTriggered = true;
 
-        wheelDatas.animationIndex++;
-        wheelDatas.waitingTime = waitingTime;
+            wheelDatas.waitingTime = waitingTime;
+            stateManager.ventManager.isProtected = true;
 
-        wheelDatas.nextSpawnPoint.x = nextSpawnPoint.position.x;
-        wheelDatas.nextSpawnPoint.y = nextSpawnPoint.position.y;
+            wheelDatas.nextSpawnPoint.x = nextSpawnPoint.position.x;
+            wheelDatas.nextSpawnPoint.y = nextSpawnPoint.position.y;
 
-        stateManager.launchRideauTransition();
+            stateManager.launchRideauTransition();
 
-        Destroy(this.gameObject);
+            Destroy(this.gameObject);
+        }
+
+
     }
 }

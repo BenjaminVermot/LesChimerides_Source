@@ -12,33 +12,47 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c25acad790d3a41de97a8431e4b89ab3, type: 3}
   m_Name: WheelDatas
   m_EditorClassIdentifier: Assembly-CSharp::WheelObject
-  finalWheelSpeed: 0
-  finalWheelSpeedFullRange: 0
+  finalWheelSpeed: 0.0488
+  finalWheelSpeedFullRange: -0.0488
   wheelDirection: 0
-  isStill: 1
-  states:
-  - startRideau
-  - intro
-  - vent
-  - soleil
-  stateIndex: 0
-  animationIndex: 0
+  isStill: 0
+  stateIndex: 4
+  animationIndex: 1
   currentState: soleil
-  "rideauEstLev\xE9": 0
+  "rideauEstLev\xE9": 1
   isInTransition: 0
   ventIsHere: 0
+  resetButtonState: 0
   nextSpawnPoint: {x: 83.9, y: -4.44, z: 0}
   waitingTime: 3
   statesValues:
-  - stateName: Introduction
-    characterSpeed: 6
+  - stateName: introRideaux
+    characterSpeed: 7
     targetWheelSpeedRange: {x: 0, y: 0}
     lerpSpeed: 4
-  - stateName: Vent
+    tip: 0
+    tipTexture: {fileID: 0}
+  - stateName: intro
     characterSpeed: 6
     targetWheelSpeedRange: {x: 0, y: 0}
     lerpSpeed: 8
-  - stateName: Soleil
+    tip: 1
+    tipTexture: {fileID: 3394557925354630126, guid: ed540ba0e8b8141b289e7bf929c05e9b, type: 3}
+  - stateName: vent
     characterSpeed: 7
     targetWheelSpeedRange: {x: 0, y: 0}
     lerpSpeed: 5
+    tip: 1
+    tipTexture: {fileID: 1404028623067837608, guid: d6d2c764a0e6b4dc7901516b182e5bb0, type: 3}
+  - stateName: introSoleil
+    characterSpeed: 7
+    targetWheelSpeedRange: {x: 0, y: 0}
+    lerpSpeed: 5
+    tip: 0
+    tipTexture: {fileID: 0}
+  - stateName: soleil
+    characterSpeed: 7
+    targetWheelSpeedRange: {x: 0, y: 0}
+    lerpSpeed: 12
+    tip: 0
+    tipTexture: {fileID: 0}

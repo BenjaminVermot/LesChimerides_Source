@@ -15,6 +15,10 @@ public class WheelObject : ScriptableObject
         public float characterSpeed;
         public Vector2 targetWheelSpeedRange;
         public float lerpSpeed;
+
+        [Header("Tip")]
+        public bool tip;
+        public Sprite tipTexture;
     }
 
     [Header("wheelValues")]
@@ -25,19 +29,21 @@ public class WheelObject : ScriptableObject
 
 
     [Header("States")]
-    public string[] states =
-    {
-        "intro",
-        "vent",
-        "soleil",
-    };
-    
+    // public string[] states =
+    // {
+    //     "intro",
+    //     "vent",
+    //     "soleil",
+    // };
+
     public int stateIndex = 0;
     public int animationIndex = 0;
     public string currentState;
     public bool rideauEstLevé = false;
     public bool isInTransition = false;
     public bool ventIsHere = false;
+
+    public int resetButtonState;
 
     public Vector3 nextSpawnPoint;
 

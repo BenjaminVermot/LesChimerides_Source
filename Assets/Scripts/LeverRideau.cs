@@ -6,11 +6,14 @@ public class LeverRideau : MonoBehaviour
     public WheelObject wheelDatas;
     public stateManager stateManager;
 
+    public Animator dynamicCurtainAnimator;
+
     [Header("Other")]
     public float moveMultiplier = 1f;
-    public float yPositionTrigger = 10;
-
     private bool hasBeenTriggered = false;
+    private bool hasStarted = false;
+
+    public float animationProgress = 0;
 
     void Update()
     {
@@ -19,9 +22,17 @@ public class LeverRideau : MonoBehaviour
             return;
         }
 
-        transform.position += Vector3.up * (wheelDatas.finalWheelSpeed * moveMultiplier * Time.deltaTime);
+        if (wheelDatas.isStill == false && hasStarted == false)
+        {
+            hasStarted = true;
+            Debug.Log("opens curtains");
+            dynamicCurtainAnimator.SetTrigger("opens");
+        }
 
-        if (transform.position.y >= yPositionTrigger && hasBeenTriggered == false)
+        animationProgress += wheelDatas.finalWheelSpeedFullRange * moveMultiplier;
+        dynamicCurtainAnimator.SetFloat("OpeningSpeed", animationProgress);
+
+        if (animationProgress >= 1 && hasBeenTriggered == false)
         {
             hasBeenTriggered = true;
             wheelDatas.rideauEstLevé = true;

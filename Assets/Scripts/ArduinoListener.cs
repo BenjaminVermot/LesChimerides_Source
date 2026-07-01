@@ -11,7 +11,6 @@ public class ArduinoListener : MonoBehaviour
     public bool isStill = true;
     private float recievedWheelSpeed = 0;
     public int direction = 0;
-    public int buttonState = 0;
 
     [Header("Lissage de la vitesse")]
     public float finalWheelSpeed = 0;
@@ -101,6 +100,8 @@ public class ArduinoListener : MonoBehaviour
             float rawSpeed = Mathf.Abs(float.Parse(values[0].Trim()));
             rawSpeed = Mathf.Clamp01(rawSpeed);
             int rawDirection = Math.Sign(int.Parse(values[1].Trim()));
+            int buttonState = Math.Sign(int.Parse(values[2].Trim()));
+            wheelDatas.resetButtonState = buttonState;
 
             if (rawDirection == 0 || rawSpeed <= 0.03f)
             {
@@ -116,7 +117,8 @@ public class ArduinoListener : MonoBehaviour
                 SetStill(false);
             }
 
-            buttonState = int.Parse(values[2].Trim());
+
+
         }
         catch (TimeoutException) { }
         catch (Exception e) { Debug.LogWarning("Erreur de parsing : " + e.Message); }

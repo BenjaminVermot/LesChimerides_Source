@@ -1,22 +1,38 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.TextCore.Text;
 
 public class SoleilManager : MonoBehaviour
 {
+    public GameObject boss;
     public WheelObject wheelDatas;
     public stateManager stateManager;
     public Animator soleilAnimator;
     private float randomLookingTime;
     private float randomCountingTime;
 
+    public GameObject character;
+
+    public Animator fadeAnimator;
+    public float timeBeforeReset;
+
     [SerializeField] private float extraTimeToStop = 2f;
 
     [SerializeField] bool isLooking = false;
 
 
-    void StartGame()
+    // void Start()
+    // {
+    //     StartCoroutine(waitForNextCounting());
+    // }
+
+    public void StartGame()
     {
-        startBossIntroAnimation();
+
+        StartCoroutine(waitForNextCounting());
+        boss.SetActive(true);
+
+        Debug.Log("Start 1,2,3 soleil !!");
     }
 
     // Update is called once per frame
@@ -46,7 +62,7 @@ public class SoleilManager : MonoBehaviour
 
     IEnumerator waitForNextCounting()
     {
-        randomLookingTime = getRandomNumber(4f, 7f);
+        randomLookingTime = getRandomNumber(2f, 3.5f);
         yield return new WaitForSeconds(randomLookingTime);
 
         soleilAnimator.SetTrigger("counts");
@@ -79,5 +95,40 @@ public class SoleilManager : MonoBehaviour
         //faire fondu au noir, et après 2 secondes respawn au dernier point 
         //Reset le temps d'attente du boss
         //? maybe rejouer l'animation d'intro
+
+
+        //Fade au noir
+        StopAllCoroutines();
+        isLooking = false;
+        fadeAnimator.SetTrigger("FadeIn");
+        StartCoroutine(waitForGameReset());
+
+
+    }
+
+    IEnumerator waitForGameReset()
+    {
+        yield return new WaitForSeconds(timeBeforeReset);
+        soleilAnimator.SetTrigger("reset");
+        isLooking = false;
+
+        character.transform.position = new Vector3(
+         wheelDatas.nextSpawnPoint.x,
+         wheelDatas.nextSpawnPoint.y,
+         character.transform.position.z
+     );
+
+
+
+
+
+        yield return new WaitForSeconds(2);
+
+
+
+        fadeAnimator.SetTrigger("FadeOut");
+        StartCoroutine(waitForNextCounting());
+
+
     }
 }

@@ -1,21 +1,33 @@
 using System.Collections;
 using System.Drawing.Text;
+using System.Runtime.Remoting.Messaging;
 using UnityEngine;
 using UnityEngine.TextCore.Text;
 
 public class stateManager : MonoBehaviour
 {
+    [Header("References")]
     public WheelObject wheelDatas;
     public VentManager ventManager;
-    public Animator[] animauxAnimators;
+    public SoleilManager soleilManager;
 
+    [Header("Particles")]
+    public ParticleSystem baseWindParticles;
+
+    [Header("Animators")]
     public Animator rideauAnimator;
-
     public Animator decorsIntroAnimation;
+    public Animator[] animauxAnimators;
     public Animator[] decorsAnimations;
 
-    public GameObject[] animaux;
+    [Header("Tips")]
+    public Animator tipAnimator;
+    public SpriteRenderer tipSpriteRenderer;
+    public float tipTimeShowing = 7f;
 
+    [Header("GameObjects")]
+    public GameObject[] decorsObjects;
+    public GameObject[] animaux;
     public GameObject character;
 
     [Header("StateStartBools")]
@@ -28,30 +40,40 @@ public class stateManager : MonoBehaviour
             return;
         }
 
-        if (wheelDatas.currentState == "vent" && windHasStarted == false)
-        {
-            startWind();
-            windHasStarted = true;
-        }
-
         handleWalkingAnimations();
     }
 
     public void nextState()
     {
-        if (wheelDatas == null || wheelDatas.states == null || wheelDatas.states.Length == 0)
+        if (wheelDatas == null || wheelDatas.statesValues == null)
         {
             return;
         }
 
-        if (wheelDatas.stateIndex < wheelDatas.states.Length - 1)
+        wheelDatas.stateIndex++;
+        wheelDatas.currentState = wheelDatas.statesValues[wheelDatas.stateIndex].stateName;
+        updateCurrentAnimation();
+
+        if (wheelDatas.currentState == "vent")
         {
-            wheelDatas.stateIndex++;
-            wheelDatas.currentState = wheelDatas.states[wheelDatas.stateIndex];
-            updateCurrentAnimation();
+            startWind();
+            baseWindParticles.Play();
+
+        }
+        else
+        {
+            baseWindParticles.Stop();
         }
 
+        if (wheelDatas.currentState == "soleil")
+        {
+            startSoleil();
+        }
 
+        if (wheelDatas.statesValues[wheelDatas.stateIndex].tip == true)
+        {
+            StartCoroutine(launchTipAnimation());
+        }
     }
 
     public void startWind()
@@ -61,6 +83,16 @@ public class stateManager : MonoBehaviour
             ventManager.StartGame();
         }
     }
+
+    void startSoleil()
+    {
+        if (ventManager != null)
+        {
+            soleilManager.StartGame();
+        }
+    }
+
+
 
     private bool lastIsStill = true;
 
@@ -124,17 +156,32 @@ public class stateManager : MonoBehaviour
                 {
                     animator.SetTrigger("VentIdle");
                 }
-
-                if (wheelDatas.isStill && !wheelDatas.ventIsHere)
-                {
-                    animator.SetTrigger("Idle");
-                }
-
                 if (wheelDatas.isStill == false && wheelDatas.ventIsHere)
                 {
                     animator.SetTrigger("VentWalking");
                 }
-                if (wheelDatas.isStill == false && wheelDatas.ventIsHere)
+                if (wheelDatas.isStill == false && !wheelDatas.ventIsHere)
+                {
+                    animator.SetTrigger("VentWalking");
+                }
+                if (wheelDatas.isStill == false && ventManager.isProtected == true && wheelDatas.ventIsHere)
+                {
+                    animator.SetTrigger("Walking");
+                }
+                if (wheelDatas.isStill == true && ventManager.isProtected == true && wheelDatas.ventIsHere)
+                {
+                    animator.SetTrigger("Idle");
+                }
+            }
+
+            //Animations de Soleil
+            if (wheelDatas.rideauEstLevé == true && wheelDatas.currentState == "soleil")
+            {
+                if (wheelDatas.isStill)
+                {
+                    animator.SetTrigger("Stops");
+                }
+                if (wheelDatas.isStill == false)
                 {
                     animator.SetTrigger("Walking");
                 }
@@ -155,7 +202,7 @@ public class stateManager : MonoBehaviour
 
     public void launchRideauTransition()
     {
-        rideauAnimator.SetTrigger("on");
+        rideauAnimator.SetTrigger("closes");
 
         Debug.Log("Rideau transition !");
 
@@ -169,6 +216,13 @@ public class stateManager : MonoBehaviour
         animaux[wheelDatas.animationIndex].SetActive(true);
         wheelDatas.isInTransition = true;
 
+        decorsObjects[wheelDatas.animationIndex].SetActive(true);
+
+
+        wheelDatas.animationIndex++;
+
+
+
         //Téléporter le player vers le prochain spawn point
         character.transform.position = new Vector3(
             wheelDatas.nextSpawnPoint.x,
@@ -181,9 +235,21 @@ public class stateManager : MonoBehaviour
 
 
         yield return new WaitForSeconds(wheelDatas.waitingTime);
-        rideauAnimator.SetTrigger("off");
+        rideauAnimator.SetTrigger("opens");
         wheelDatas.isInTransition = false;
         nextState();
+
+    }
+
+    IEnumerator launchTipAnimation()
+    {
+        tipSpriteRenderer.sprite = wheelDatas.statesValues[wheelDatas.stateIndex].tipTexture;
+
+        tipAnimator.SetTrigger("Opens");
+
+        yield return new WaitForSeconds(tipTimeShowing);
+
+        tipAnimator.SetTrigger("Closes");
 
     }
 }
